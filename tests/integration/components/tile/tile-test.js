@@ -17,11 +17,11 @@ module('Integration | Component | tile/tile', function(hooks) {
 
   test('it renders a tile with an icon', async function(assert) {
     this.setProperties({
-      state: { tiles: ["X"] },
+      tiles: ["X"],
       pos: 0,
       onClick: function() {}
     })
-    await render(hbs`<Tile::Tile @pos={{this.pos}} @state={{this.state}} @onClick={{this.onClick}}/>`);
+    await render(hbs`<Tile::Tile @pos={{this.pos}} @tiles={{this.tiles}} @onClick={{this.onClick}}/>`);
     assert.dom('.tile').hasText("X");
   });
 });

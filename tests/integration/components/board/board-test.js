@@ -23,5 +23,19 @@ module('Integration | Component | board/board', function(hooks) {
     assert.dom(tiles[1]).hasText("O");
   });
 
-
+  test('X wins when finishing a row and reset the game when clicking again', async function(assert) {
+    await render(hbs`<Board::Board />`);
+    const tiles = findAll('.tile');
+    await click(tiles[0]); // x
+    await click(tiles[1]); // o
+    await click(tiles[3]); // x
+    await click(tiles[2]); // o
+    await click(tiles[6]); // x
+    assert.dom(this.element).containsText("Winner is X");
+    assert.dom(this.element).containsText("Player X: 1");
+    await click(tiles[0]);
+    assert.dom(tiles[0]).hasText("X");
+    assert.dom(tiles[1]).hasNoText();
+    assert.dom(this.element).containsText("Player turn: O");
+  })
 });
