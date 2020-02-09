@@ -1,4 +1,5 @@
 <div class="board flex">
+  <Info @state={{this.state}} />
   <div class="layout-row">
     <Tile::Tile @pos={{0}} @state={{this.state}} @onClick={{this.placeMove}} />
     <Tile::Tile @pos={{1}} @state={{this.state}} @onClick={{this.placeMove}} />

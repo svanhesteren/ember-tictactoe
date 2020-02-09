@@ -1,0 +1,11 @@
+<div class="layout-row">
+  {{#if @state.done}}
+    {{#if @state.winner}}
+      <h1>Winner is {{@state.winner}}</h1>
+    {{else}}
+      <h1>Its a draw!</h1>
+    {{/if}}
+  {{else}}
+    <h1>Player turn: {{if @state.turnX "X" "O"}}</h1>
+  {{/if}}
+</div>
