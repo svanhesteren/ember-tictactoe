@@ -1,3 +1,7 @@
-<PaperButton raised={{true}} type="button" class="tile flex" {{on "click" (fn @onClick @pos)}}>
+<PaperButton @primary={{true}}
+             @raised={{true}}
+             type="button"
+             class="tile flex"
+             {{on "click" (fn @onClick @pos)}} >
   {{this.icon}}
 </PaperButton>

@@ -1,3 +1,8 @@
+
+$primary: 'blue-grey';
+$accent: 'light-green';
+$warn: 'pink';
+
 @import 'ember-paper';
 
 $_grey: #d3d3d3;
@@ -9,6 +14,14 @@ body {
   background-color: $_lightblue;
 }
 
+.intro {
+  margin-top: 10%;
+}
+
+.intro-btn {
+  padding: 20px 40px;
+}
+
 .board-container {
   justify-content: space-around;
   width: 100%;
@@ -16,6 +29,11 @@ body {
 
 .info {
   color: $_black;
+}
+
+.md-button {
+  background-color: paper-color($primary, '50') !important;
+  color: $_black !important;
 }
 
 .tile {
