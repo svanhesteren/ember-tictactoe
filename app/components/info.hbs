@@ -1,11 +1,11 @@
-<div class="layout-row">
+<div class="layout-row layout-align-space-around info">
   {{#if @state.done}}
     {{#if @state.winner}}
-      <h1>Winner is {{@state.winner}}</h1>
+      <h2>Winner is {{@state.winner}}</h2>
     {{else}}
-      <h1>Its a draw!</h1>
+      <h2>Its a draw!</h2>
     {{/if}}
   {{else}}
-    <h1>Player turn: {{if @state.turnX "X" "O"}}</h1>
+    <h2>Player turn: {{if @state.turnX "X" "O"}}</h2>
   {{/if}}
 </div>

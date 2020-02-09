@@ -16,6 +16,6 @@ module('Integration | Component | score', function(hooks) {
     })
 
     await render(hbs`<Score @score={{this.score}} />`);
-    assert.dom(this.element).hasText('Score Player X: 5 Player O: 2 Draw: 7');
+    assert.dom(this.element).hasText('Player X: 5 Player O: 2 Draw: 7');
   });
 });

@@ -1,27 +1,40 @@
 @import 'ember-paper';
 
+$_grey: #d3d3d3;
+$_lightblue: #d0dce6;
+$_black: #000;
+$_darkgrey: #747474;
+
+body {
+  background-color: $_lightblue;
+}
+
 .board-container {
   justify-content: space-around;
   width: 100%;
 }
 
+.info {
+  color: $_black;
+}
+
 .tile {
-  max-width: 200px;
-  height: 200px;
-  width: 200px;
-  background-color: yellow;
-  border: 1px solid black;
-  text-align: center;
-  margin: auto;
+  border: 1px solid $_grey;
+  color: $_black;
   font-size: 140px;
+  height: 200px;
   line-height: 200px;
+  margin: 3px;
+  max-width: 200px;
+  outline: none;
+  text-align: center;
   user-select: none;
-  cursor: pointer;
+  width: 200px;
 }
 
 .board {
-  background-color: blue;
-  max-width: 600px;
+  color: $_darkgrey;
   height: 600px;
+  max-width: 600px;
   width: 600px;
 }
