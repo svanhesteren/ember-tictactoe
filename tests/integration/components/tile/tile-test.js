@@ -7,10 +7,16 @@ module('Integration | Component | tile/tile', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders a tile', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Tile::Tile />`);
     assert.dom('.tile').exists();
+  });
+
+  test('it renders a tile with an icon', async function(assert) {
+    this.setProperties({
+      state: { tiles: ["X"] },
+      pos: 0
+    })
+    await render(hbs`<Tile::Tile @pos={{this.pos}} @state={{this.state}}/>`);
+    assert.dom('.tile').hasText("X");
   });
 });

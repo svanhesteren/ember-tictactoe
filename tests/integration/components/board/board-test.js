@@ -7,11 +7,7 @@ module('Integration | Component | board/board', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Board::Board />`);
     assert.dom('.board').exists();
-
   });
 });
