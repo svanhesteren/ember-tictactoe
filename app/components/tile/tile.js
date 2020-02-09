@@ -5,4 +5,5 @@ export default class TileTileComponent extends Component {
     let { state, pos } = this.args;
     return state ? state.tiles[pos] : "";
   }
+
 }
