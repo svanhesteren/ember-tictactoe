@@ -1,9 +1,22 @@
 @import 'ember-paper';
 
-
 .board-container {
   justify-content: space-around;
   width: 100%;
+}
+
+.tile {
+  max-width: 200px;
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+  font-size: 140px;
+  line-height: 200px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .board {
