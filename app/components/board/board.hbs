@@ -1,0 +1,31 @@
+<PaperCard as |card|>
+  <div class="board flex">
+    <card.title as |title|>
+      <title.text as |text|>
+        <text.headline>
+          <Info @state={{this.state}} />
+        </text.headline>
+        <text.subhead>
+          <Score @score={{this.state.score}} />
+        </text.subhead>
+      </title.text>
+    </card.title>
+    <card.content>
+      <div class="layout-row">
+        <Tile::Tile @pos={{0}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{1}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{2}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+      </div>
+      <div class="layout-row">
+        <Tile::Tile @pos={{3}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{4}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{5}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+      </div>
+      <div class="layout-row">
+        <Tile::Tile @pos={{6}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{7}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+        <Tile::Tile @pos={{8}} @tiles={{this.state.tiles}} @onClick={{this.placeMove}} />
+      </div>
+    </card.content>
+  </div>
+</PaperCard>
